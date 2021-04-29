@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP SRP5030CA-3R3M
+D Fixed Inductors 3.3uH20% 8.1A
+K
+F https://componentsearchengine.com/Datasheets/1/SRP5030CA-3R3M.pdf
+$ENDCMP
+#
+#End Doc Library

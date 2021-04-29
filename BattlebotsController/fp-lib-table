@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "BattlebotsController")(type "KiCad")(uri "${KIPRJMOD}/BattlebotsController.pretty")(options "")(descr ""))
+)

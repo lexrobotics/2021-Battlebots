@@ -1,0 +1,7 @@
+(sym_lib_table
+  (lib (name "TPS56528DDAR")(type "KiCad")(uri "${KIPRJMOD}/TPS56528DDAR.kicad_sym")(options "")(descr ""))
+  (lib (name "TLE94004")(type "KiCad")(uri "${KIPRJMOD}/TLE94004.kicad_sym")(options "")(descr ""))
+  (lib (name "AP7312")(type "KiCad")(uri "${KIPRJMOD}/AP7312.kicad_sym")(options "")(descr ""))
+  (lib (name "TPS54821RHLR")(type "KiCad")(uri "${KIPRJMOD}/TPS54821RHLR.kicad_sym")(options "")(descr ""))
+  (lib (name "BattlebotsController")(type "KiCad")(uri "${KIPRJMOD}/BattlebotsController.kicad_sym")(options "")(descr ""))
+)
