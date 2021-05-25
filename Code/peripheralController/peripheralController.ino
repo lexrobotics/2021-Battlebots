@@ -3,16 +3,18 @@
 
 #include <Wire.h>
 
-#define LED4 MISO
-#define LED3 MOSI
-#define LED2 7
-#define LED1 4
-#define PWR_EN 1
-#define MOTOR_EN 0
+#define LED4 8
+#define LED3 MISO
+#define LED2 MOSI
+#define LED1 SCK
+#define PWR_EN 14
+#define MOTOR_EN 4
 #define RIGHT_FORWARD 9
 #define RIGHT_BACK 10
 #define LEFT_FORWARD 5
 #define LEFT_BACK 6
+
+// SERVOS 0123 ARE PC0123
 
 #define PULSE_MAX 2000
 
@@ -147,7 +149,7 @@ void setup() {
 }
 
 void loop() {
-  if(lockdown) { // needs to receive at least 3 pulses from IR receiver (noise reject)
+  /*if(lockdown) { // needs to receive at least 3 pulses from IR receiver (noise reject)
     digitalWrite(MOTOR_EN, 0); // shutoff motors until restart
     digitalWrite(PWR_EN, 0); // shutoff power until restart
     PORTC &= 0xF0; // shutoff all servos until restart
@@ -158,12 +160,21 @@ void loop() {
       showBatteryLevel(0);
       delay(250);
     }
-  }
+  }*/
 
   digitalWrite(MOTOR_EN, 1);
   
   // put your main code here, to run repeatedly:
+  showBatteryLevel(0);
+  delay(500);
   showBatteryLevel(1);
+  delay(500);
+  showBatteryLevel(2);
+  delay(500);
+  showBatteryLevel(3);
+  delay(500);
+  showBatteryLevel(4);
+  delay(500);
   servo1 = 1000;
   servo2 = 1250;
   servo3 = 1500;
@@ -171,8 +182,8 @@ void loop() {
   
   writeMotors(100, 100);
   delay(1000);
-  showBatteryLevel(2);
   writeMotors(-100, -100);
   delay(1000);
+  
   ir_trigger = 0; //clear this every so often
 }
